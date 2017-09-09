@@ -1,0 +1,329 @@
+/*Normalize*/
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: #302521;
+  text-decoration: underline;
+} a:hover {
+  text-decoration: none;
+}
+body {
+  overflow-x: hidden;
+}
+/*Background Style*/
+header {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background-position: left;
+  background-size: cover;
+}
+.background-image-container {
+  position: absolute;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+#background-image {
+  height: 100vh;
+  width: 100vw;
+  filter: grayscale(55%) blur(0px);
+  -webkit-filter: grayscale(55%) blur(0px);
+}
+
+.background-container {
+  height: 190vh;
+  width: 120vw;
+  margin-left: -10vw;
+  margin-top: -45vh;
+  transform: rotate(-30deg);
+  transform-origin: center;
+  display: flex;
+  flex-direction: column;
+}
+.slider-space {
+  width: 100%;
+  flex: 1;
+}
+.slider {
+  height: 100%;
+  width: 50%;
+  background-color: rgba(0,0,0,.4);
+}
+
+/*Background Slider Animations*/
+#slider1 {
+  width: 40%;
+  animation-name: slider1animate;
+  animation-duration: 100s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#slider2 {
+  width: 20%;
+  animation-name: slider2animate;
+  animation-duration: 100s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#slider3 {
+  float: right;
+  width: 35%;
+  animation-name: slider3animate;
+  animation-duration: 100s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#slider4 {
+  width: 25%;
+  animation-name: slider4animate;
+  animation-duration: 100s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#slider5 {
+  float: right;
+  width: 25%;
+  animation-name: slider5animate;
+  animation-duration: 100s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#slider6 {
+  width: 50%;
+  animation-name: slider6animate;
+  animation-duration: 100s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#slider7 {
+  width: 85%;
+  animation-name: slider7animate;
+  animation-duration: 100s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes slider1animate {
+  0% {width: 40%;}
+  70% {width: 40%;}
+  75% {width: 25%;}
+  100% {width: 25%;}
+}
+@keyframes slider2animate {
+  0% {width: 20%;}
+  60% {width: 20%;}
+  65% {width: 33%;}
+  100% {width: 33%;}
+}
+@keyframes slider3animate {
+  0% {width: 35%;}
+  10% {width: 35%;}
+  15% {width: 70%;}
+  100% {width: 70%;}
+}
+@keyframes slider4animate {
+  0% {width: 25%;}
+  50% {width: 25%;}
+  55% {width: 65%;}
+  100% {width: 65%;}
+}
+@keyframes slider5animate {
+  0% {width: 25%;}
+  80% {width: 25%;}
+  85% {width: 65%;}
+  100% {width: 65%;}
+}
+@keyframes slider6animate {
+  0% {width: 50%;}
+  30% {width: 50%}
+  35% {width: 77%}
+  100% {width: 77%;}
+}
+@keyframes slider7animate {
+  0% {width: 85%;}
+  20% {width: 85%;}
+  25% {width: 65%;}
+  100% {width: 65%;}
+}
+/*Sliders Hover State*/
+.slider-hover {
+  position: absolute;
+  z-index: 5;
+  height: 27.142857vh;
+  width: 100%;
+  background-color: white;
+  opacity: 0;
+  display: flex;
+}
+.slider-hover:hover {
+  opacity: .8;
+}
+.slider-hover h1 {
+  margin: auto;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 10vh;
+}
+
+/*Top Left Box*/
+#profile-container {
+  height: 100px;
+  width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#profile-picture-filter {
+  height: 12vw;
+  width: 12vw;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  opacity: .35;
+  margin: 1.5vw;
+  position: absolute;
+  top: 0;
+} #profile-picture-filter:hover {
+  opacity: .2;
+}
+#profile-picture {
+  height: 12vw;
+  width: 12vw;
+  border-radius: 50%;
+  filter: grayscale(80%) brightness(150%);
+  -webkit-filter: grayscale(80%) brightness(150%);
+  margin: 1.5vw;
+}
+#profile-title {
+  font-family: 'Fjalla One', sans-serif;
+  width: 25vw;
+  border-radius: 50%;
+  font-size: 3.5vw;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  margin: 3vw 14.5vw;
+  line-height: 9vh;
+  color: black;
+}
+
+/*Contact Buttons*/
+#contacts {
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  height: 3vw;
+}
+.button {
+  height: 3vw;
+  width: 3vw;
+  border-radius: 2px;
+  margin-right: 15px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  float: right;
+} .button:hover {
+  height: 3.5vw;
+  width: 3.5vw;
+}
+.button .icon {
+  margin: auto;
+  height: 3vw;
+  width: 3vw;
+  border-radius: 50%;
+}
+
+/*General Body Style*/
+.container {
+  width: 80vw;
+  margin-left: 10vw;
+  margin-bottom: 40px;
+}
+.title {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 50px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: 0;
+}
+.body-text {
+  font-size: 17px;
+  line-height: 30px;
+  font-family: 'Catamaran', sans-serif;
+}
+/*About Body*/
+#about-body {
+  display: none;
+}
+/*Portfolio Body*/
+#portfolio-body {
+  display: none;
+}
+iframe {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 80vh;
+  width: 80vw;
+}
+/*Hire Body*/
+#hire-body {
+  display: none;
+}
+/*Footer*/
+footer {
+  width: 100vw;
+  height: 75px;
+  background-color: #302521;
+}
+footer p {
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  font-family: 'Catamaran', sans-serif;
+  line-height: 25px;
+}
+footer a {
+  color: white;
+}
+
+
+@media (orientation: portrait) {
+  #slider1, #slider2, #slider3, #slider4, #slider5, #slider6, #slider7 {
+    animation-play-state: paused;
+  }
+  .slider-hover {
+    opacity: .8;
+    height: 20vh;
+  }
+  .slider-hover h1 {
+    font-size: 10vw;
+  }
+  .background-container {
+    height: 140vh;
+    width: 160vw;
+    margin-left: -30vw;
+    margin-top: -8vh;
+  }
+  #background-image {
+    width: auto;
+  }
+  #profile-picture {
+    height: 125px;
+    width: 125px;
+  }
+  #profile-picture-filter {
+    height: 125px;
+    width: 125px;
+  }
+  #profile-title {
+    margin: 10px 155px;
+    z-index: 5;
+    width: 60vw;
+    font-size: 5vh;
+  }
+  #contacts {
+    display: none;
+  }
+}
